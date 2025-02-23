@@ -12,9 +12,7 @@ Yummi is a modern and stylish restaurant website designed for food lovers. It sh
 ✅ **Fast Navigation** - Easy access to menu, about, and contact pages.  
 
 ## Technologies Used
-- **Frontend**: React, Tailwind CSS  
-- **Backend**: Node.js, Express (if applicable)  
-- **Database**: MongoDB (if applicable)  
-- **Other Tools**: ShadCN UI, Lucide Icons, Framer Motion  
+- React, Tailwind CSS  
+  
 
 ![Yummi](https://github.com/user-attachments/assets/e6712509-4c3e-470a-b15f-976ea1a81de7)
