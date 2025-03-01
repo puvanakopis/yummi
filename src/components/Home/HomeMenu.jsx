@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { FaStar } from "react-icons/fa";
 import "./HomeMenu.css";
 import { homeMenu } from "../../assets/assets";
@@ -9,7 +9,7 @@ import { ViewContext } from "../../components/context/Context";
 const HomeMenu = () => {
   const navigate = useNavigate();
 
-  // ✅ Add Intersection Observer inside useEffect
+
   useEffect(() => {
     const items = document.querySelectorAll(".HomeMenuItemList");
     const observer = new IntersectionObserver(
@@ -18,7 +18,7 @@ const HomeMenu = () => {
           if (entry.isIntersecting) {
             entry.target.style.animation = "fadeIn 0.6s ease-out forwards";
           } else {
-            entry.target.style.animation = "none"; // Reset animation
+            entry.target.style.animation = "none";
           }
         });
       },
@@ -28,11 +28,12 @@ const HomeMenu = () => {
     items.forEach((item) => observer.observe(item));
 
     return () => {
-      items.forEach((item) => observer.unobserve(item)); // Cleanup observer
+      items.forEach((item) => observer.unobserve(item)); 
     };
-  }, []); // ✅ Empty dependency array means this will run once on mount
+  }, []); 
 
-  // Access the context
+  
+  
   const { count, setCount } = useContext(OrderCountContext);
   const { addItem } = useContext(ViewContext);
 
@@ -52,7 +53,7 @@ const HomeMenu = () => {
   return (
     <div className='HomeMenu'>
       <div><h1 className='MainHeading'>Most Popular Items</h1></div>
-      <div className='HomeMenuItem grid grid-cols-3 gap-4'>
+      <div className='HomeMenuItem grid place-items-center grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4'>
         {homeMenu.map((item, index) => (
           <div key={index} className='HomeMenuItemList'>
             <img src={item.Img} alt={item.Name} />  

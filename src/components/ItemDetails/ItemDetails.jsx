@@ -1,13 +1,11 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import "./ItemDetails.css";
 import { ViewContext } from "../../components/context/Context";
 import { MyContext } from "../../components/context/OrderContext";
 import { OrderCountContext } from "../../components/context/OrderCountContext";
-import { useNavigate } from "react-router-dom";
+
 
 const ItemDetails = () => {
-  const navigate = useNavigate();
-
 
   // Get item details from ViewContext
   const { items } = useContext(ViewContext);
@@ -29,26 +27,17 @@ const ItemDetails = () => {
   // Increase count
   const handleNext = () => {
     setCurrentCount(currentCount + 1);
-  }; 
+  };
 
-  // const updateCount = (newCount) => {
-  //   setCount(newCount);
-  //   console.log(newCount)
-  // };
+  // Add item to the cart and update order count
+  const addOrderNow = (item) => {
+    addItem({ ...item, quantity: currentCount });
 
-const addOrderNow = (items) => {
-  addItem({ ...items, quantity: currentCount });
+    setCount((prevCount) => prevCount + currentCount);
 
-  setCount((prevCount) => {
-    const updatedCount = prevCount + currentCount;
-    return updatedCount;
-  });
-  
-
-  alert(`Added to Cart: ${items.Name}\nQuantity: ${currentCount}`);
-};
-
-  
+    // Use a friendly notification instead of alert (e.g., toast or modal)
+    alert(`Added to Cart: ${item.Name}\nQuantity: ${currentCount}`);
+  };
 
   return (
     <div className="ItemDetails">
@@ -63,32 +52,42 @@ const addOrderNow = (items) => {
           <div className="itemDecPrice w-4/7">
             <div className="itemDecPrice1">{items.desc}</div>
             <div className="itemDecPrice2">
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Brand</div>
-                <div className="itemDecPrice2-1-2">: Grandma's Kitchen</div>
-              </div>
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Flavour</div>
-                <div className="itemDecPrice2-1-2">: Chocolate</div>
-              </div>
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Diet Type</div>
-                <div className="itemDecPrice2-1-2">: Vegetarian</div>
-              </div>
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Weight</div>
-                <div className="itemDecPrice2-1-2">: 500ml</div>
-              </div>
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Speciality</div>
-                <div className="itemDecPrice2-1-2">: Low Fat, High Protein</div>
-              </div>
-              <div className="itemDecPrice2-1">
-                <div className="itemDecPrice2-1-1">Info</div>
-                <div className="itemDecPrice2-1-2">
-                  : No Preservatives, Gluten-Free
+              {items.brand && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Brand</div>
+                  <div className="itemDecPrice2-1-2">{items.brand}</div>
                 </div>
-              </div>
+              )}
+              {items.flavor && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Flavour</div>
+                  <div className="itemDecPrice2-1-2">{items.flavor}</div>
+                </div>
+              )}
+              {items.dietType && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Diet Type</div>
+                  <div className="itemDecPrice2-1-2">{items.dietType}</div>
+                </div>
+              )}
+              {items.weight && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Weight</div>
+                  <div className="itemDecPrice2-1-2">{items.weight}</div>
+                </div>
+              )}
+              {items.speciality && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Speciality</div>
+                  <div className="itemDecPrice2-1-2">{items.speciality}</div>
+                </div>
+              )}
+              {items.info && (
+                <div className="itemDecPrice2-1">
+                  <div className="itemDecPrice2-1-1">Info</div>
+                  <div className="itemDecPrice2-1-2">{items.info}</div>
+                </div>
+              )}
             </div>
             <div className="itemDecPrice3">
               <div className="itemDecPrice3-1">
@@ -106,12 +105,15 @@ const addOrderNow = (items) => {
                     <button
                       onClick={handlePrev}
                       disabled={currentCount === 1}
-                      className="disabled:opacity-50 cursor-pointer"
+                      className={`cursor-pointer ${currentCount === 1 ? "opacity-50" : ""}`}
                     >
                       &lt;
                     </button>
                     <span className="text-lg font-semibold">{currentCount}</span>
-                    <button onClick={handleNext} className="disabled:opacity-50 cursor-pointer">
+                    <button
+                      onClick={handleNext}
+                      className="cursor-pointer"
+                    >
                       &gt;
                     </button>
                   </div>

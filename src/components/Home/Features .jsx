@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./Features.css";
 import { HomeFeatures } from "../../assets/assets";
 
@@ -10,7 +10,7 @@ const Features = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("show"); // ✅ Add fade-in effect
+            entry.target.classList.add("show");
           } else {
             entry.target.classList.remove("show"); // ✅ Remove when out of view
           }
@@ -31,7 +31,7 @@ const Features = () => {
       <div>
         <h1 className="MainHeading">Why Choose Our Food</h1>
       </div>
-      <div className="flex justify-center Features gap-x-25">
+      <div className="Features flex justify-center grid place-items-center grid-cols-1 sm:grid-cols-1 xl:grid-cols-3 gap-x-25">
         <div className="Features-1 w-1/4 ScrollingAnimation">
           <div>
             <img src={HomeFeatures.HF1} alt="" />

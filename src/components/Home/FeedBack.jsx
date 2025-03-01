@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./FeedBack.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -52,7 +52,6 @@ const FeedBack = () => {
       </div>
 
       <div className="feedBack2 flex flex-row items-center text-center">
-        {/* Left Arrow */}
         <div className="feedBack2-1 w-1/4">
           <button onClick={handlePrev} className="text-gray-600 hover:text-gray-900 mx-3 cursor-pointer">
             <FaChevronLeft size={24} />
