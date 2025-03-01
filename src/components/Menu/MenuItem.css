@@ -9,6 +9,28 @@
     margin-top: 50px;
 }
 
+.MenuItem {
+  display: grid;
+  place-items: center;
+  gap: 2.5rem;
+  
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+
+ 
+  @media (min-width: 850px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @media (min-width: 1450px) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+
   
   .itemsList {
       height: 250px;

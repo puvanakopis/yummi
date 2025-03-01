@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "../Menu/MenuItem.css";
 import { FaStar } from "react-icons/fa";
 import { mainMenu } from "../../assets/assets";
@@ -37,7 +37,7 @@ const MenuItem = ({ category }) => {
     }
   };
 
-  // ✅ Add Intersection Observer inside useEffect
+  
   useEffect(() => {
     const items = document.querySelectorAll(".itemsList");
     const observer = new IntersectionObserver(
@@ -56,13 +56,13 @@ const MenuItem = ({ category }) => {
     items.forEach((item) => observer.observe(item));
 
     return () => {
-      items.forEach((item) => observer.unobserve(item)); // Cleanup observer
+      items.forEach((item) => observer.unobserve(item));
     };
-  }, [currentItems]); // ✅ Runs when currentItems changes
+  }, [currentItems]); 
 
   return (
     <div ref={menuRef}>
-      <div className="MenuItem grid grid-cols-4 gap-x-7 gap-y-10">
+      <div className="MenuItem place-items-center grid  gap-y-10">
         {currentItems.map((item) => (
           <div key={item.id} className="itemsList">
             <img src={item.Img} alt={item.Name} />
