@@ -1,6 +1,6 @@
 import { banner } from "../../assets/assets";
 import "../Menu/MenuHeader.css";
-import { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import MenuItem from "../Menu/MenuItem";
 
 const MenuHeader = () => {
