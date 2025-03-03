@@ -1,17 +1,16 @@
 import "./SignUp.css";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const LoginPopup = () => {
+const SignUp = () => {
   const navigate = useNavigate();
 
   const handleOrderNow = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-    navigate("/LoginPopup");
+    navigate("/Login");
   };
 
   return (
-    <div className="LoginPopup flex justify-center items-center">
+    <div className="Login flex justify-center items-center">
       <div className="login-container">
         <h2 className="login-title MainHeading">Sign Up</h2>
         <div className="login-box">
@@ -77,4 +76,4 @@ const LoginPopup = () => {
   );
 };
 
-export default LoginPopup;
+export default SignUp;

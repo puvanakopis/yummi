@@ -1,84 +1,78 @@
+/* Importing Tailwind CSS and Google Fonts */
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&family=Praise&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Praise&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Noto+Serif+Tamil:wght@100..900&family=Poltawski+Nowy:wght@400..700&display=swap');
 
-
-.navbar{
+/* Navbar Styles */
+.navbar {
     font-family: "Poltawski Nowy", serif;
     font-weight: 400;
-    font-style: normal;
-    margin: 0px 130px 15px 130px;
     font-size: 18px;
+    margin: 0px 130px 15px 130px;
 }
 
 
 
-.logo{
-    height: fit-content;
+/* Logo Section */
+.logo {
     position: relative;
     width: 20%;
 }
 
-.first .logo-1{
-    font-family: "Praise", serif;
-    font-weight: 100;
-    font-size: 70px;
-    font-style: normal; 
-    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.3); 
-}
 
-.first .logo-2{
-    position: absolute;
-    right: 50px;
-    bottom:  10px;
-    font-weight: 400;
-    font-size: 11px;
-    font-style: normal; 
-    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.3); 
-}
 
-.first .search-bar {
+
+/* Navigation Menu */
+.menu {
     display: flex;
     width: 60%;
     justify-content: center;
     align-items: center;
 }
 
-.first .search-bar div {
+.menu ul{
     display: flex;
-    align-items: center;
-    background-color: #f8e9e4;
-    padding: 0 10px ;
-    margin: 30px;
-    border-radius: 5px;
-    box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.3);  
-    width: 80%;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;
 }
 
-.first .search-bar div input {
-    border: none;
-    background: none;
-    padding: 10px;
-    outline: none;
-    width: 100%;
-    font-size: 15px;
+.menu ul li{
+    display: flex;
+    flex-direction: row;
 }
 
-.first .like-item {
+
+
+
+
+/* Icons for Favorite, Cart, and Login */
+.icon {
+    width: 20%;
     display: flex;
-    width: 7%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 30px;
+    flex-direction: row;
+}
+
+.menu-icon, .order-icon, .login-icon {
     cursor: pointer;
-}
-
-.first .like-item{
     position: relative;
-    
+    width: 35px;
+    height: 35px;
 }
 
-.first .like-item .dot{
+.menu-icon img, .order-icon img{
+    width: 35px;
+    height: 35px;
+}
+
+.login-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Notification Dot */
+.menu-icon .dot, .order-icon .dot {
     position: absolute;
     min-width: 17px;
     min-height: 17px;
@@ -88,65 +82,80 @@
     right: 20px;
     font-size: 13px;
     text-align: center;
-    color: #ffff;
+    color: #fff;
 }
 
-.first .order-item {
-    display: flex;
-    width: 7%;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    cursor: pointer;
+/* Mobile Menu Icon */
+.mobile-view-icon {
+    display: none;
 }
 
-.first .order-item{
-    position: relative;
+.mobile_view {
+    display: none !important;
 }
 
-.first .order-item .dot{
-    position: absolute;
-    min-width: 17px;
-    min-height: 17px;
-    background-color: #EA641A;
-    border-radius: 50px;
-    top: -5px;
-    right: 25px;
-    font-size: 13px;
-    text-align: center;
-    color: #ffff;
-}
-
-.first .login {
-    display: flex;
-    width: 8%;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.first .login div{
-    cursor: pointer;
-    display: flex;
-    width: 5%;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    cursor: pointer;
-    height: 50px;
-    width: 50px;
-    border-radius: 60px;
-  
-}
-
-
-/* 2nd */
-
-.last li{
-    cursor: pointer;
-}
-
-.navbar .active{
+/* Active Link Color */
+.navbar .active {
     color: #EA641A;
+}
 
+
+
+
+/* Mobile Navigation Styles */
+@media (max-width: 1100px) {
+
+    .navbar {
+        margin: 20px 50px;
+    }
+
+
+    .logo, .logo-img {
+        width: 150px;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .mobile-view-icon {
+        display: flex;
+        width: 50px;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    .mobile_view {
+        display: flex !important;
+    }
+
+    .menu ul {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(94, 93, 93);
+        width: 300px;
+        padding-top: 80px;
+        transition: transform 0.5s ease-in-out;
+        z-index: 10;
+    }
+
+    .menu ul  li{
+        padding-top: 10%;
+    }
+
+    /* Hide and show mobile menu */
+    .hide-mobile-menu {
+        transform: translateX(100%);
+    }
+
+    .show-mobile-menu {
+        transform: translateX(0);
+    }
 }

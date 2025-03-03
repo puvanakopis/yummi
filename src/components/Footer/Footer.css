@@ -1,9 +1,13 @@
 @import "tailwindcss";
+
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&family=Praise&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif+Tamil:ital,wght@0,100..900;1,100..900&family=Poltawski+Nowy:ital,wght@0,400..700;1,400..700&family=Praise&display=swap');
 
+
+/* Footer container styling */
 .Footer{
-    font-family: "Poltawski Nowy", serif;
+    font-family: "Poltawski Nowy", serif; /* Applying selected font */
     font-weight: 400;
     font-style: normal;
     font-size: 15px;
@@ -11,6 +15,10 @@
     background-color: #D9D9D9;
 }
 
+
+
+
+/* First section - Logo and Social Media */
 .f1{
     height: max-content;
     height: fit-content;
@@ -21,31 +29,15 @@
     justify-content: center;
 }
 
+/* Logo container */
 .f1 .logo{
     width: 100%;
 }
 
-.f1 .logo-1{
-    font-family: "Praise", serif;
-    font-weight: 100;
-    font-size: 70px;
-    font-style: normal; 
-    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.3); 
-}
 
-.f1 .logo-2{
-    position: absolute;
-    right: 110px;
-    bottom:  10px;
-    font-weight: 400;
-    font-size: 11px;
-    font-style: normal; 
-    text-shadow: 5px 3px 3px rgba(0, 0, 0, 0.3); 
-}
-
+/* Social media icons container */
 .social_media{
     position: relative;
-    /* background-color: red; */
 }
 
 .social_media .media{
@@ -69,6 +61,9 @@
 }
 
 
+
+
+/* Second, third, and fourth sections */
 .f2, .f3, .f4 {
     height: max-content;
     padding: 60px 60px;
@@ -82,7 +77,7 @@
     display: flex;
     cursor: pointer;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; 
     padding: 5px 15px;
     color: #606060;
 }
@@ -93,30 +88,39 @@
 
 .f2 ul li:hover , .f3 ul li:hover, .f4 ul li:hover {
    color: #EA641A;
-   transform: translateX(10px); 
+   transform: translateX(10px);
 }
 
 
 
 
 
-@media (max-width: 1100px) {
-    .f2 , .f3{
+/* Responsive Design */
+@media (max-width: 1300px) {
+    .f1{
         display: none;
-      }
-    .f1 , .f4{
-      width:50%;
+    }
+    .f2 , .f3 ,  .f4{
+      width:30%;
     }
   }
   
-
-
-@media (max-width: 1200px) {
-    .f3{
-      display: none;
+@media (max-width: 800px) {
+    .f1 , .f3{
+      display: none; 
     }
-    .f1 , .f4{
+    .f2 , .f4{
       width: 33.3%;
     }
-  }
+}
   
+@media (max-width: 700px) {
+    .f2  , .f3, .f4{
+      display: none; 
+    }
+
+    .f1{
+        display: flex !important;
+        width: 100%;
+    }
+}

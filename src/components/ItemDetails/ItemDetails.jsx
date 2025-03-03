@@ -1,20 +1,33 @@
 import { useState, useContext } from "react";
 import "./ItemDetails.css";
+
+// old
 import { ViewContext } from "../../components/context/Context";
 import { MyContext } from "../../components/context/OrderContext";
 import { OrderCountContext } from "../../components/context/OrderCountContext";
 
+//  new add
+// import { AppContext } from "../../components/context/AppContext";
+
+
 
 const ItemDetails = () => {
+
+  // old
 
   // Get item details from ViewContext
   const { items } = useContext(ViewContext);
 
-  // Add item to OrderContext
+  // // Add item to OrderContext
   const { addItem } = useContext(MyContext);
 
   // Update order count
   const { setCount } = useContext(OrderCountContext);
+
+
+
+//  new add
+  // const { items, setCount } = useContext(AppContext);
 
   // State for order count
   const [currentCount, setCurrentCount] = useState(1);

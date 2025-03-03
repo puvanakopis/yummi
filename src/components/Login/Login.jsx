@@ -1,12 +1,12 @@
 import "./Login.css";
 import { useNavigate } from 'react-router-dom';
 
-const LoginPopup = () => {
+const Login = () => {
   const navigate = useNavigate();
 
-  const handleNavigation = (path) => {
-    navigate(path);
-  };
+  // const handleNavigation = (path) => {
+  //   navigate(path);
+  // };
 
   const handleOrderNow = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -40,8 +40,7 @@ const LoginPopup = () => {
 
             <button type="submit" className="login-btn">Log In</button>
 
-            <p className="signup-text">
-              Don't have an account? <a
+            <p className="signup-text">Don&apos;t have an account? <a
                 href="#"
                 onClick={(e) => {
                   e.preventDefault();
@@ -55,4 +54,4 @@ const LoginPopup = () => {
   );
 };
 
-export default LoginPopup;
+export default Login;

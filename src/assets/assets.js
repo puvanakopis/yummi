@@ -287,139 +287,144 @@ export const banner =
 
 export const mainMenu =[
     {
-        id:1,
-        Name : "Orange Juices",
-        Img : drinks1,
-        Price : 350,
-        Rate : 4.7,
-        desc :"Refresh with our Orange Juice, a vibrant and naturally sweet drink bursting with fresh citrus flavor!",
-         ItemCategory : "Drinks"
+        id: 1,
+        Name: "Orange Juices",
+        Img: drinks1,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Refresh with our Orange Juice, a vibrant and naturally sweet drink bursting with fresh citrus flavor!",
+        ItemCategory: "Drinks"
     },
     {
-        id:126,
-        Name : "Vanilla",
-        Img : Ice_Cream1,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Ice Cream"
+        id: 126,
+        Name: "Vanilla Ice Cream",
+        Img: Ice_Cream1,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Indulge in our Vanilla Ice Cream, a creamy delight with a rich and smooth flavor in every scoop!",
+        ItemCategory: "Ice Cream"
     },
     {
-        id:101,
-        Name : "Nachos with Cheese",
-        Img : Snacks1,
-        Price : 350,
-        Rate : 4.7,
-        desc :"Refresh with our Orange Juice, a vibrant and naturally sweet drink bursting with fresh citrus flavor!",
-         ItemCategory : "Snacks"
+        id: 101,
+        Name: "Nachos with Cheese",
+        Img: Snacks1,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Crunch into our Nachos with Cheese, a deliciously crispy snack topped with rich, melted cheese!",
+        ItemCategory: "Snacks"
     },
     {
-        id:51,
-        Name : "Scrambled Eggs",
-        Img : Breakfast1,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Breakfast"
+        id: 51,
+        Name: "Scrambled Eggs",
+        Img: Breakfast1,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Enjoy our Scrambled Eggs, a fluffy and savory breakfast classic made to perfection!",
+        ItemCategory: "Breakfast"
     },
     {
-        id:2,
-        Name : "Cranberry Juices",
-        Img : drinks2,
-        Price : 300,
-        Rate : 4.7,
-        desc :"Enjoy our Cranberry Juice, a crisp and tart beverage packed with refreshing, fruity flavor in every sip!",
-        ItemCategory : "Drinks"
+        id: 2,
+        Name: "Cranberry Juices",
+        Img: drinks2,
+        Price: 300,
+        Rate: 4.7,
+        desc: "Enjoy our Cranberry Juice, a crisp and tart beverage packed with refreshing, fruity flavor in every sip!",
+        ItemCategory: "Drinks"
     },
     {
-        id:102,
-        Name : "Popcorn",
-        Img : Snacks2,
-        Price : 350,
-        Rate : 4.7,
-        desc :"Refresh with our Orange Juice, a vibrant and naturally sweet drink bursting with fresh citrus flavor!",
-         ItemCategory : "Snacks"
+        id: 102,
+        Name: "Popcorn",
+        Img: Snacks2,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Savor our Popcorn, a light and crunchy snack, perfectly buttered and seasoned for a tasty treat!",
+        ItemCategory: "Snacks"
     },
     {
-        id:52,
-        Name : "Pancakes",
-        Img : Breakfast2,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Breakfast"
+        id: 52,
+        Name: "Pancakes",
+        Img: Breakfast2,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Delight in our Pancakes, soft and fluffy stacks served with a drizzle of sweet maple syrup!",
+        ItemCategory: "Breakfast"
     },
     {
-        id:3,
-        Name : "Pineapple Juices",
-        Img : drinks3,
-        Price : 250,
-        Rate : 5,
-        desc :"Quench your thirst with our Pineapple Juice, a sweet and tangy drink bursting with tropical flavor!",
-        ItemCategory : "Drinks"
+        id: 3,
+        Name: "Pineapple Juices",
+        Img: drinks3,
+        Price: 250,
+        Rate: 5,
+        desc: "Quench your thirst with our Pineapple Juice, a sweet and tangy drink bursting with tropical flavor!",
+        ItemCategory: "Drinks"
     },
     {
-        id:151,
-        Name : "Buttermilk Biscuits",
-        Img : Biscuits1,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Biscuits"
+        id: 151,
+        Name: "Buttermilk Biscuits",
+        Img: Biscuits1,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Enjoy our Buttermilk Biscuits, soft, flaky, and baked to golden perfection with a buttery taste!",
+        ItemCategory: "Biscuits"
     },
     {
-        id:127,
-        Name : "Chocolate",
-        Img : Ice_Cream2,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Ice Cream"
+        id: 127,
+        Name: "Chocolate Ice Cream",
+        Img: Ice_Cream2,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Treat yourself to our Chocolate Ice Cream, a rich and creamy dessert with intense cocoa flavor!",
+        ItemCategory: "Ice Cream"
     },
     {
-        id:4,
-        Name : "Lemonade",
-        Img : drinks4,
-        Price : 300,
-        Rate : 3.5,
-        desc:"Cool off with our Lemonade, a perfect balance of tangy lemons and refreshing sweetness in every sip!",
-        temCategory : "Drinks"
+        id: 4,
+        Name: "Lemonade",
+        Img: drinks4,
+        Price: 300,
+        Rate: 3.5,
+        desc: "Cool off with our Lemonade, a perfect balance of tangy lemons and refreshing sweetness in every sip!",
+        ItemCategory: "Drinks"
     },
     {
-        id:5,
-        Name : "Cola",
-        Img : drinks5,
-        Price : 250,
-        Rate : 3.3,
-        desc:"Refresh with our Cola, a fizzy, sweet drink with that classic, bold flavor you love!",
-        ItemCategory : "Drinks"
+        id: 5,
+        Name: "Cola",
+        Img: drinks5,
+        Price: 250,
+        Rate: 3.3,
+        desc: "Refresh with our Cola, a fizzy, sweet drink with that classic, bold flavor you love!",
+        ItemCategory: "Drinks"
     },
     {
-        id:152,
-        Name : "Lebkuchen",
-        Img : Biscuits2,
-        Price : 350,
-        Rate : 4.7,
-        desc :"",
-         ItemCategory : "Biscuits"
+        id: 152,
+        Name: "Lebkuchen",
+        Img: Biscuits2,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Enjoy our Lebkuchen, a deliciously spiced biscuit with a sweet glaze, perfect for any occasion!",
+        ItemCategory: "Biscuits"
     },
     {
-        id:103,
-        Name : "French Fries",
-        Img : Snacks3,
-        Price : 350,
-        Rate : 4.7,
-        desc :"Refresh with our Orange Juice, a vibrant and naturally sweet drink bursting with fresh citrus flavor!",
-         ItemCategory : "Snacks"
+        id: 103,
+        Name: "French Fries",
+        Img: Snacks3,
+        Price: 350,
+        Rate: 4.7,
+        desc: "Crispy on the outside, fluffy on the inside – our French Fries are the perfect salty snack!",
+        ItemCategory: "Snacks"
     },
+
+
+
+
+    //1
     {
         id:153,
         Name : "Oatmeal Biscuits",
         Img : Biscuits3,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Biscuits"
+        desc :"Crunch into our Oatmeal Biscuits, a perfect blend of wholesome oats and a touch of sweetness!",
+        ItemCategory : "Biscuits"
     },
     {
         id:104,
@@ -427,8 +432,8 @@ export const mainMenu =[
         Img : Snacks4,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Stay refreshed with our Lemonade Soft Drinks, a bubbly twist on a citrusy classic!",
+        ItemCategory : "Snacks"
     },
     {
         id:6,
@@ -437,7 +442,7 @@ export const mainMenu =[
         Price : 200,
         Rate : 4.5,
         desc :"Enjoy a Virgin Mojito, a refreshing blend of mint, lime, and soda for a cool, non-alcoholic treat!",
-         ItemCategory : "Drinks"   
+        ItemCategory : "Drinks"   
     },
     {
         id:128,
@@ -445,8 +450,8 @@ export const mainMenu =[
         Img : Ice_Cream3,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Ice Cream"
+        desc :"Indulge in our creamy Strawberry Ice Cream, bursting with the fresh, juicy flavor of real strawberries!",
+        ItemCategory : "Ice Cream"
     },
     {
         id:154,
@@ -454,7 +459,7 @@ export const mainMenu =[
         Img : Biscuits4,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Savor the buttery richness of our Shortbread Biscuits, a melt-in-your-mouth classic treat!",
         ItemCategory : "Biscuits"
     },
     {
@@ -463,8 +468,8 @@ export const mainMenu =[
         Img : Snacks5,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Enjoy the fizzy, bold taste of our classic Cola, a refreshing companion for any snack!",
+        ItemCategory : "Snacks"
     },
     {
         id:7,
@@ -481,7 +486,7 @@ export const mainMenu =[
         Img : Biscuits5,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Sweeten your day with our Sugar Biscuits, a crunchy delight sprinkled with just the right amount of sweetness!",
         ItemCategory : "Biscuits"
     },
     {
@@ -490,8 +495,8 @@ export const mainMenu =[
         Img : Snacks6,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Crispy and savory, our Spring Rolls are packed with fresh veggies and flavorful spices!",
+        ItemCategory : "Snacks"
     },
     {
         id:156,
@@ -499,7 +504,7 @@ export const mainMenu =[
         Img : Biscuits6,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Enjoy the perfect balance of crunch and cheesy goodness in our Cheese Biscuits!",
         ItemCategory : "Biscuits"
     },
     {
@@ -508,7 +513,7 @@ export const mainMenu =[
         Img : Biscuits7,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Crispy on the outside, tender on the inside—our Chicken Nuggets are a timeless favorite!",
         ItemCategory : "Biscuits"
     },
     {
@@ -517,8 +522,8 @@ export const mainMenu =[
         Img : Ice_Cream4,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Ice Cream"
+        desc :"Satisfy your sweet tooth with our Cookies and Cream Ice Cream, a creamy blend of vanilla and crunchy cookie bits!",
+        ItemCategory : "Ice Cream"
     },
     {
         id:53,
@@ -526,7 +531,7 @@ export const mainMenu =[
         Img : Breakfast3,
         Price : 450,
         Rate : 5,
-        desc:"",
+        desc:"Start your day right with our French Toast, golden-brown and drizzled with syrup for the perfect breakfast treat!",
         ItemCategory : "Breakfast"
     },
     {
@@ -544,16 +549,37 @@ export const mainMenu =[
         Img : Snacks7,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Bite into our golden, crispy Chicken Nuggets, packed with juicy flavor in every bite!",
+        ItemCategory : "Snacks"
     },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //2
     {
         id:54,
         Name : "Omelette",
         Img : Breakfast4,
         Price : 150,
         Rate : 4,
-        desc:"",
+        desc:"Start your day with our Omelette, a fluffy, protein-packed breakfast classic made with farm-fresh eggs!",
         ItemCategory : "Breakfast"
     },
     {
@@ -562,7 +588,7 @@ export const mainMenu =[
         Img : Biscuits8,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Enjoy our Peanut Biscuits, a crunchy and nutty delight, perfect for tea time or a quick snack!",
         ItemCategory : "Biscuits"
     },
     {
@@ -571,7 +597,7 @@ export const mainMenu =[
         Img : Biscuits9,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Indulge in our buttery Scones, a soft and crumbly treat perfect with jam, cream, or your favorite spread!",
         ItemCategory : "Biscuits"
     },
     {
@@ -580,7 +606,7 @@ export const mainMenu =[
         Img : Biscuits10,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Savor our Sweet Potato Biscuits, a warm and slightly sweet biscuit that pairs perfectly with any meal!",
         ItemCategory : "Biscuits"
     },
     {
@@ -589,7 +615,7 @@ export const mainMenu =[
         Img : Breakfast5,
         Price : 150,
         Rate : 4,
-        desc:"",
+        desc:"Enjoy our Avocado Toast, a delicious and healthy breakfast topped with fresh, creamy avocado and seasonings!",
         ItemCategory : "Breakfast"
     },
     {
@@ -599,7 +625,7 @@ export const mainMenu =[
         Price : 500,
         Rate : 3,
         desc:"Enjoy a Cosmopolitan, a sleek mix of vodka, cranberry, and lime for a tangy, smooth, and refreshing cocktail!",
-         ItemCategory : "Drinks"
+        ItemCategory : "Drinks"
     },
     {
         id:108,
@@ -607,8 +633,8 @@ export const mainMenu =[
         Img : Snacks8,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Crispy and golden, our Onion Rings are the perfect crunchy snack with just the right amount of seasoning!",
+        ItemCategory : "Snacks"
     },
     {
         id:161,
@@ -616,7 +642,7 @@ export const mainMenu =[
         Img : Biscuits11,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Taste our Garlic Biscuits, a savory delight infused with rich garlic flavor and a soft, buttery texture!",
         ItemCategory : "Biscuits"
     },
     {
@@ -626,7 +652,7 @@ export const mainMenu =[
         Price : 500,
         Rate : 3,
         desc:"Relax with our Sangria, a vibrant blend of wine, fruits, and spices, perfectly chilled for a refreshing, festive drink!",
-         ItemCategory : "Drinks"
+        ItemCategory : "Drinks"
     },
     {
         id:162,
@@ -634,7 +660,7 @@ export const mainMenu =[
         Img : Biscuits12,
         Price : 350,
         Rate : 4.7,
-        desc :"",
+        desc :"Enjoy our Drop Biscuits, light and fluffy with a buttery taste, perfect for any time of the day!",
         ItemCategory : "Biscuits"
     },
     {
@@ -643,8 +669,8 @@ export const mainMenu =[
         Img : Snacks9,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Satisfy your cravings with our crispy and flavorful Potato Wedges, seasoned to perfection!",
+        ItemCategory : "Snacks"
     },
     {
         id:130,
@@ -652,8 +678,8 @@ export const mainMenu =[
         Img : Ice_Cream5,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Ice Cream"
+        desc :"Cool down with our Mint Chocolate Chip Ice Cream, a refreshing mix of rich chocolate chips and cool mint flavor!",
+        ItemCategory : "Ice Cream"
     },
     {
         id:110,
@@ -661,8 +687,8 @@ export const mainMenu =[
         Img : Snacks10,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Our Garlic Bread is crispy, buttery, and infused with roasted garlic flavor—perfect for any meal!",
+        ItemCategory : "Snacks"
     },
     {
         id:56,
@@ -670,17 +696,17 @@ export const mainMenu =[
         Img : Breakfast6,
         Price : 150,
         Rate : 4,
-        desc:"",
+        desc:"Start your morning with our Breakfast Burrito, packed with eggs, cheese, and fresh veggies in a warm tortilla!",
         ItemCategory : "Breakfast"
     },
     {
         id:111,
-        Name : " Pita Bread",
+        Name : "Pita Bread",
         Img : Snacks11,
         Price : 350,
         Rate : 4.7,
-        desc :"",
-         ItemCategory : "Snacks"
+        desc :"Soft and fluffy, our Pita Bread is perfect for wraps, dips, or enjoying with your favorite spread!",
+        ItemCategory : "Snacks"
     },
     {
         id:57,
@@ -688,9 +714,19 @@ export const mainMenu =[
         Img : Breakfast7,
         Price : 150,
         Rate : 4,
-        desc:"",
+        desc:"Enjoy our freshly baked Bagels, a chewy and delicious breakfast staple that pairs perfectly with any topping!",
         ItemCategory : "Breakfast"
     },
+
+
+
+
+
+
+
+
+
+    // 3
     {
         id:112,
         Name : "Cheese Crackers",
@@ -791,6 +827,7 @@ export const mainMenu =[
         desc:"",
         ItemCategory : "Breakfast"
     },
+    
     {
         id:113,
         Name : "Deviled Eggs",

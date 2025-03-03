@@ -46,7 +46,7 @@ const MenuItem = ({ category }) => {
           if (entry.isIntersecting) {
             entry.target.style.animation = "fadeIn 0.6s ease-out forwards";
           } else {
-            entry.target.style.animation = "none"; // Reset animation
+            entry.target.style.animation = "none";
           }
         });
       },

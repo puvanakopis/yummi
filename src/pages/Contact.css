@@ -1,69 +1,62 @@
-.Contact{
+/* Contact Page Styling */
+.Contact {
     font-family: "Poltawski Nowy", serif;
     font-weight: 400;
     font-style: normal;
-    margin: 0px 130px 0 130px;
+    margin: 0 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-.contactBanner{
+/* Banner Styling */
+.contactBanner {
     width: 100%;
-    height: fit-content;
+    height: auto;
     animation: fadeIn 1s;
 }
 
-.contactBanner img{
+.contactBanner img {
     width: 100%;
-    height: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-
-.contactDesc{
-    background-color: rgba(234, 100, 26, 0.2) !important;
-    margin-top: 100px;
-    margin-bottom: 150px;
+/* Contact Description */
+.contactDesc {
+    background-color: rgba(234, 100, 26, 0.2);
+    margin: 100px 0 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 70px 70px;
+    padding: 70px;
     width: 100%;
-    height: fit-content;
     animation: fadeIn 1s;
 }
 
-.contactDesc-1{
+.contactDesc-1 {
     background-color: white;
     width: 80%;
-    height: fit-content;
-    padding: 70px !important;
+    padding: 70px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-
-
-
-
+/* Form Styling */
 form {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* Form Group Styling */
 .form-group {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 
 .half {
     width: 48%;
-    margin-right: 4%;
-}
-
-.half:nth-child(2n) {
-    margin-right: 0;
 }
 
 .full {
@@ -78,13 +71,120 @@ label {
 
 input, textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
 }
 
 textarea {
     resize: none;
 }
 
+/* Hover & Focus Effects */
+input:focus, textarea:focus {
+    border-color: #ea641a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(234, 100, 26, 0.5);
+}
+
+/* Button Styling */
+.mainButton {
+    background-color: #ea641a;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    width: 100%;
+}
+
+.mainButton:hover {
+    background-color: #c6551b;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .Contact {
+        margin: 0 50px;
+    }
+
+    .contactDesc {
+        padding: 50px;
+    }
+
+    .contactDesc-1 {
+        width: 90%;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Contact {
+        margin: 0 20px;
+    }
+
+    .contactDesc {
+        margin-top: 50px;
+        padding: 40px;
+    }
+
+    .contactDesc-1 {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .half {
+        width: 100%;
+    }
+
+    .mainButton {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactDesc {
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+    .contactDesc-1 {
+        padding: 30px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    .half {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .mainButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

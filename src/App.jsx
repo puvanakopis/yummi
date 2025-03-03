@@ -9,10 +9,13 @@ import OrderItem from "./pages/OrderItem";
 import DeliveryFormPage from "./components/DeliveryForm/DeliveryForm";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import SignUp from "./components/Login/SignUp";
+import LoginPopup from "./components/Login/Login";
+
 import {ViewProvider} from "./components/context/Context"
 import {MyProvider} from "./components/context/OrderContext"
 import {OrderCountProvider } from "./components/context/OrderCountContext"
-import LoginPopup from "./components/Login/Login";
+
+
  
 
 const App = () => {

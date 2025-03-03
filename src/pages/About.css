@@ -10,7 +10,6 @@
 
 .aboutBanner{
     width: 100%;
-    height: 450px;
     animation: fadeIn 1s;
 }
 
@@ -46,5 +45,9 @@
     font-style: italic;
     font-weight: bold;
     text-align: center;
-    padding: 50px 0;
+    padding: 50px 0 10px 0;
+}
+
+.mapContainer{
+    margin-bottom: 50px;
 }

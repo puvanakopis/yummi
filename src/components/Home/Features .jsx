@@ -12,7 +12,7 @@ const Features = () => {
           if (entry.isIntersecting) {
             entry.target.classList.add("show");
           } else {
-            entry.target.classList.remove("show"); // ✅ Remove when out of view
+            entry.target.classList.remove("show"); 
           }
         });
       },
