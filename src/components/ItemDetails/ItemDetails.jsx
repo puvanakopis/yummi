@@ -1,36 +1,37 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ItemDetails.css";
 
-// old
+// Old context imports
 import { ViewContext } from "../../components/context/Context";
 import { MyContext } from "../../components/context/OrderContext";
 import { OrderCountContext } from "../../components/context/OrderCountContext";
 
-//  new add
-// import { AppContext } from "../../components/context/AppContext";
-
-
+// Check login status from localStorage
+const isUserLoggedIn = () => {
+  return localStorage.getItem("loggedInUser") !== null;
+};
 
 const ItemDetails = () => {
-
-  // old
+  const navigate = useNavigate();
 
   // Get item details from ViewContext
   const { items } = useContext(ViewContext);
 
-  // // Add item to OrderContext
+  // Add item to OrderContext
   const { addItem } = useContext(MyContext);
 
   // Update order count
   const { setCount } = useContext(OrderCountContext);
 
-
-
-//  new add
-  // const { items, setCount } = useContext(AppContext);
-
   // State for order count
   const [currentCount, setCurrentCount] = useState(1);
+  const [isLoggedIn, setIsLoggedIn] = useState(isUserLoggedIn());
+
+  // Check login status on component mount and whenever login status changes
+  useEffect(() => {
+    setIsLoggedIn(isUserLoggedIn());
+  }, [isLoggedIn]);
 
   // Decrease count
   const handlePrev = () => {
@@ -44,11 +45,13 @@ const ItemDetails = () => {
 
   // Add item to the cart and update order count
   const addOrderNow = (item) => {
+    if (!isLoggedIn) {
+      navigate("/login"); // Redirect to login if not logged in
+      return;
+    }
+
     addItem({ ...item, quantity: currentCount });
-
     setCount((prevCount) => prevCount + currentCount);
-
-    // Use a friendly notification instead of alert (e.g., toast or modal)
     alert(`Added to Cart: ${item.Name}\nQuantity: ${currentCount}`);
   };
 
@@ -104,7 +107,6 @@ const ItemDetails = () => {
             </div>
             <div className="itemDecPrice3">
               <div className="itemDecPrice3-1">
-                {/* Rating */}
                 <div className="flex items-center gap-1 mt-3">
                   {"⭐".repeat(5)}
                   <span className="text-sm text-gray-700">(50 Reviews)</span>
@@ -112,7 +114,6 @@ const ItemDetails = () => {
               </div>
               <div className="itemDecPrice3-2">Rs 500.00</div>
               <div className="itemDecPrice3-3 flex flex-row">
-                {/* Quantity Selector */}
                 <div className="w-1/2">
                   <div className="ProductCard flex items-center gap-2 mainButton">
                     <button
@@ -123,16 +124,11 @@ const ItemDetails = () => {
                       &lt;
                     </button>
                     <span className="text-lg font-semibold">{currentCount}</span>
-                    <button
-                      onClick={handleNext}
-                      className="cursor-pointer"
-                    >
+                    <button onClick={handleNext} className="cursor-pointer">
                       &gt;
                     </button>
                   </div>
                 </div>
-
-                {/* Add to Cart Button */}
                 <div
                   className="w-1/2 mainButton itemDecPrice3-3-2"
                   onClick={() => addOrderNow(items)}

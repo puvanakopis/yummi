@@ -1,5 +1,5 @@
 /* General Styles */
-.Login {
+.SignUp {
     font-family: "Poltawski Nowy", serif;
     height: fit-content;
     display: flex;
@@ -12,7 +12,7 @@
 }
 
 /* Login Container */
-.login-container {
+.SignUp-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,29 +26,30 @@
 }
 
 /* Login Box */
-.login-box {
+.SignUp-box {
     background: white;
-    padding: 60px 40px;
+    padding: 70px  !important;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
-    width: 450px;
+    width: 500px !important;
 }
+
+
+
 
 /* Input Fields */
-.email, .password {
+.email, .phone , .password {
     width: 100%;
-    margin-bottom: 35px;
 }
 
-.email label, .password label {
+.email label, .phone label, .password label {
     display: block;
     font-size: 14px;
     font-weight: bold;
-    margin-bottom: 5px;
 }
 
-.email input, .password input {
+.email input, .phone input ,  .password input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -56,31 +57,9 @@
     font-size: 14px;
 }
 
-/* Options (Checkbox + Forgot Password) */
-.options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-    width: 100%;
-}
-
-.options .options2{
-  color: #E7641A;
-}
-
-.options label {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-}
-
-.options input[type="checkbox"] {
-    margin-right: 5px;
-}
 
 /* Login Button */
-.login-btn {
+.signup-btn {
     width: 100%;
     background-color: #E7641A;
     color: white;
@@ -93,19 +72,6 @@
     transition: all 0.3s;
 }
 
-.login-btn:hover {
+.signup-btn:hover {
     color: black;
-}
-
-/* Sign Up Text */
-.signup-text {
-    font-size: 14px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.signup-text a {
-    color: #E7641A;
-    text-decoration: none;
-    font-weight: bold;
 }

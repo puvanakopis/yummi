@@ -57,7 +57,7 @@
 .menu-icon, .order-icon, .login-icon {
     cursor: pointer;
     position: relative;
-    width: 35px;
+    width: 100px;
     height: 35px;
 }
 
@@ -79,7 +79,7 @@
     background-color: #EA641A;
     border-radius: 50px;
     top: -5px;
-    right: 20px;
+    right: 45px;
     font-size: 13px;
     text-align: center;
     color: #fff;

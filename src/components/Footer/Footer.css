@@ -24,14 +24,18 @@
     height: fit-content;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: center !important;
     text-align: center;
-    justify-content: center;
+    justify-content: center !important;
+
 }
 
 /* Logo container */
 .f1 .logo{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    width: 300px;
 }
 
 
